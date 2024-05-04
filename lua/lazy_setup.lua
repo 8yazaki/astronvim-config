@@ -1,4 +1,24 @@
 require("lazy").setup({
+  -- Codeium
+  -- https://github.com/Exafunction/codeium.vim
+  -- Run :Codeium Auth to set up the plugin and start using Codeium.
+  {
+    'Exafunction/codeium.vim',
+    event = 'BufEnter'
+  },
+
+  -- zk-nvim
+  -- https://github.com/zk-org/zk-nvim
+  {
+    "zk-org/zk-nvim",
+    config = function()
+      require("zk").setup({
+        -- See Setup section below
+      })
+    end
+  },
+    
+  --Original below
   {
     "AstroNvim/AstroNvim",
     version = "^4", -- Remove version tracking to elect for nighly AstroNvim
